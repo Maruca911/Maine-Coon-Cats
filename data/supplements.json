@@ -1,0 +1,40 @@
+{
+    "supplements": [
+        {
+            "name": "Taurine",
+            "description": "Essential amino acid for cats",
+            "dosage": "1/4 teaspoon per meal",
+            "importance": "Critical for heart and eye health"
+        },
+        {
+            "name": "Calcium",
+            "description": "Mineral supplement",
+            "dosage": "1/4 teaspoon per meal",
+            "importance": "Essential for bone health"
+        },
+        {
+            "name": "Vitamin B Complex",
+            "description": "B vitamin supplement",
+            "dosage": "1/4 teaspoon per meal",
+            "importance": "Supports metabolism and energy"
+        },
+        {
+            "name": "Fish Oil",
+            "description": "Omega-3 fatty acids",
+            "dosage": "1/4 teaspoon per meal",
+            "importance": "Promotes healthy skin and coat"
+        },
+        {
+            "name": "Potassium Chloride",
+            "description": "Electrolyte supplement",
+            "dosage": "1/4 teaspoon per meal",
+            "importance": "Maintains proper electrolyte balance"
+        },
+        {
+            "name": "Iodine",
+            "description": "Mineral supplement",
+            "dosage": "1/4 teaspoon per meal",
+            "importance": "Supports thyroid function"
+        }
+    ]
+} 

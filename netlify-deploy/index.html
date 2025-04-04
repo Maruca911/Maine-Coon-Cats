@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Care Guide - Your Source for Cat Care Information</title>
+    <meta name="description" content="Expert advice and tips for cat care, health, nutrition, and behavior.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="/js/main.js" defer></script>
+    <script src="/js/search-index.js" defer></script>
+    <script src="/js/search.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="/">Cat Care Guide</a>
+            </div>
+            <div class="nav-links">
+                <a href="/blog" aria-label="Browse all cat care articles">Blog</a>
+                <a href="/about" aria-label="Learn about Cat Care Guide">About</a>
+                <a href="/contact" aria-label="Contact Cat Care Guide">Contact</a>
+            </div>
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Search articles...">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-form">
+            <input type="text" class="search-input" placeholder="Search articles...">
+            <div class="close-search">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="search-results"></div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Your Complete Guide to Cat Care</h1>
+                    <p>Expert advice, tips, and resources to help you provide the best care for your feline friend.</p>
+                    <a href="/blog/guides-and-tips/essential-cat-care-guide-for-beginners" class="cta-button" aria-label="Read our essential cat care guide">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Content -->
+        <section class="featured-section">
+            <div class="container">
+                <h2>Featured Guides</h2>
+                <div class="featured-grid">
+                    <article class="featured-card">
+                        <img src="/images/cat-care-basics.jpg" alt="Cat Care Basics - Essential Guide">
+                        <div class="featured-content">
+                            <h3>Essential Cat Care Guide</h3>
+                            <p>Everything you need to know about caring for your cat, from daily routines to essential supplies.</p>
+                            <a href="/blog/guides-and-tips/essential-cat-care-guide-for-beginners" class="read-more" aria-label="Read more about essential cat care">Read More</a>
+                        </div>
+                    </article>
+                    <article class="featured-card">
+                        <img src="/images/cat-nutrition.jpg" alt="Cat Nutrition Guide - Understanding Feline Diet">
+                        <div class="featured-content">
+                            <h3>Understanding Cat Nutrition</h3>
+                            <p>Learn about feline nutrition and how to provide your cat with a balanced, healthy diet.</p>
+                            <a href="/blog/wellbeing/understanding-cat-nutrition-complete-guide" class="read-more" aria-label="Read more about cat nutrition">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Navigation -->
+        <section class="categories-section">
+            <div class="container">
+                <h2>Explore Categories</h2>
+                <div class="categories-grid">
+                    <a href="/blog/cat-breeds" class="category-card" aria-label="Browse cat breeds information">
+                        <i class="fas fa-paw"></i>
+                        <h3>Cat Breeds</h3>
+                        <p>Learn about different cat breeds and their unique characteristics.</p>
+                    </a>
+                    <a href="/blog/guides-and-tips" class="category-card" aria-label="Browse cat care guides and tips">
+                        <i class="fas fa-book"></i>
+                        <h3>Guides & Tips</h3>
+                        <p>Comprehensive guides and expert tips for cat care.</p>
+                    </a>
+                    <a href="/blog/toys-and-accessories" class="category-card" aria-label="Browse cat toys and accessories">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Toys & Accessories</h3>
+                        <p>Find the best toys and accessories for your cat.</p>
+                    </a>
+                    <a href="/blog/wellbeing" class="category-card" aria-label="Browse cat wellbeing tips">
+                        <i class="fas fa-star"></i>
+                        <h3>Wellbeing</h3>
+                        <p>Tips for keeping your cat happy and healthy.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Did You Know Section -->
+        <section class="did-you-know-section">
+            <div class="container">
+                <h2>Did You Know?</h2>
+                <div class="fact-card">
+                    <div class="fact-content">
+                        <p>Cats can rotate their ears 180 degrees and can hear sounds up to 64,000 Hz, which is much higher than humans can hear!</p>
+                    </div>
+                    <div class="fact-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Most Popular Articles -->
+        <section class="popular-section">
+            <div class="container">
+                <h2>Most Popular Articles</h2>
+                <div class="popular-grid">
+                    <article class="popular-card">
+                        <div class="popular-number">1</div>
+                        <div class="popular-content">
+                            <h3><a href="/blog/guides-and-tips/essential-cat-care-guide-for-beginners" aria-label="Read our essential cat care guide">Essential Cat Care Guide</a></h3>
+                            <p>Learn the fundamentals of cat care, from daily routines to essential supplies.</p>
+                        </div>
+                    </article>
+                    <article class="popular-card">
+                        <div class="popular-number">2</div>
+                        <div class="popular-content">
+                            <h3><a href="/blog/wellbeing/understanding-cat-nutrition-complete-guide" aria-label="Read our cat nutrition guide">Understanding Cat Nutrition</a></h3>
+                            <p>Discover the key elements of feline nutrition and balanced diet.</p>
+                        </div>
+                    </article>
+                    <article class="popular-card">
+                        <div class="popular-number">3</div>
+                        <div class="popular-content">
+                            <h3><a href="/blog/guides-and-tips/understanding-cat-behavior-complete-guide" aria-label="Read our cat behavior guide">Understanding Cat Behavior</a></h3>
+                            <p>Decode your cat's behavior and understand their communication.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated with Cat Care Tips</h2>
+                    <p>Subscribe to our newsletter for expert advice, exclusive content, and the latest cat care information.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="cta-button">Subscribe Now</button>
+                    </form>
+                    <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="/about" aria-label="Learn about Cat Care Guide">About</a>
+                <a href="/contact" aria-label="Contact Cat Care Guide">Contact</a>
+                <a href="/privacy" aria-label="Read our privacy policy">Privacy Policy</a>
+            </div>
+            <div class="copyright">
+                © 2024 Cat Care Guide. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

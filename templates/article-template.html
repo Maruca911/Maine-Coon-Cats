@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | Cat Care Guide</title>
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:image" content="{{image}}">
+    <meta property="og:url" content="{{url}}">
+    <meta property="og:type" content="article">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image" content="{{image}}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preload" href="/css/blog.css" as="style">
+    <link rel="preload" href="/css/social.css" as="style">
+    <link rel="preload" href="{{image}}" as="image">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{title}}",
+        "description": "{{description}}",
+        "image": "{{image}}",
+        "author": {
+            "@type": "Organization",
+            "name": "Cat Care Guide",
+            "url": "https://catcareguide.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cat Care Guide",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://catcareguide.com/images/logo.png"
+            },
+            "url": "https://catcareguide.com"
+        },
+        "datePublished": "{{date}}",
+        "dateModified": "{{date}}",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{url}}"
+        },
+        "keywords": "{{keywords}}",
+        "wordCount": "{{wordCount}}",
+        "timeRequired": "{{readTime}}",
+        "articleSection": "{{category}}",
+        "articleBody": "{{articleBody}}",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/ReadAction",
+            "userInteractionCount": "{{readCount}}"
+        }
+    }
+    </script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/social.css">
+    {{#if customCss}}
+    <link rel="stylesheet" href="{{customCss}}">
+    {{/if}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Print Styles -->
+    <link rel="stylesheet" href="/css/print.css" media="print">
+</head>
+<body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Cat Care Guide Logo" width="150" height="50" loading="eager">
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li class="dropdown">
+                    <a href="/blog">Blog</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/blog/wellbeing">Wellbeing</a></li>
+                        <li><a href="/blog/breeds">Breeds</a></li>
+                        <li><a href="/blog/guidesandtips">Guides & Tips</a></li>
+                        <li><a href="/blog/toysandaccessoires">Toys & Accessories</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="container">
+        <article class="blog-post">
+            <header class="post-header">
+                <h1>{{title}}</h1>
+                <div class="post-meta">
+                    <span class="date">{{date}}</span>
+                    <span class="read-time">{{readTime}}</span>
+                    <span class="category">{{category}}</span>
+                    <span class="word-count">{{wordCount}} words</span>
+                </div>
+            </header>
+
+            <div class="hero-image">
+                <picture>
+                    <source
+                        srcset="{{imageWebp}}"
+                        type="image/webp"
+                    >
+                    <img 
+                        src="{{image}}"
+                        alt="{{imageAlt}}" 
+                        loading="eager"
+                        width="800" 
+                        height="400"
+                        decoding="async"
+                    >
+                </picture>
+                <div class="hero-overlay">
+                    <h2>{{heroTitle}}</h2>
+                    <p>{{heroSubtitle}}</p>
+                </div>
+            </div>
+
+            <!-- Social Features -->
+            <div class="social-features">
+                <div class="like-section">
+                    <button class="like-button" aria-label="Like article">
+                        <i class="fas fa-heart"></i>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+                <div class="share-section">
+                    <span class="share-title">Share this article:</span>
+                    <div class="share-buttons">
+                        <button class="share-button facebook" data-platform="facebook" aria-label="Share on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button class="share-button twitter" data-platform="twitter" aria-label="Share on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button class="share-button linkedin" data-platform="linkedin" aria-label="Share on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </button>
+                        <button class="share-button pinterest" data-platform="pinterest" aria-label="Share on Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="save-section">
+                    <button class="save-button" aria-label="Save article">
+                        <i class="fas fa-bookmark"></i>
+                        <span>Save for Later</span>
+                    </button>
+                    <button class="print-button" aria-label="Print article">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
+                </div>
+            </div>
+
+            <nav class="table-of-contents" aria-label="Table of contents">
+                <h2>Table of Contents</h2>
+                <ul>
+                    {{#each tableOfContents}}
+                    <li><a href="#{{this.id}}">{{this.title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+
+            <div class="article-content">
+                {{content}}
+            </div>
+
+            <div class="newsletter-signup">
+                <h3>Get More Cat Care Tips</h3>
+                <p>Subscribe to our newsletter for expert advice and exclusive content!</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                    <div class="form-message"></div>
+                </form>
+            </div>
+
+            <div class="related-content">
+                <h3>Related Articles</h3>
+                <div class="related-articles-grid">
+                    {{#each relatedArticles}}
+                    <article class="related-article">
+                        <img src="{{this.image}}" alt="{{this.title}}" loading="lazy">
+                        <h4><a href="{{this.url}}">{{this.title}}</a></h4>
+                        <p>{{this.excerpt}}</p>
+                    </article>
+                    {{/each}}
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section">
+                <div class="comments-header">
+                    <h2>Comments</h2>
+                    <span class="comment-count">0 comments</span>
+                </div>
+
+                <!-- Comment Form -->
+                <form class="comment-form" id="commentForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Your Comment</label>
+                        <textarea id="comment" name="comment" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-comment">Post Comment</button>
+                </form>
+
+                <!-- Comments List -->
+                <div class="comments-list" id="commentsList">
+                    <div class="no-comments">
+                        <p>No comments yet. Be the first to share your thoughts!</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
+            <div class="copyright">
+                © 2024 Cat Care Guide. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="/js/social.js" defer></script>
+    <script src="/js/comments.js" defer></script>
+    <script src="/js/article.js" defer></script>
+    {{#if customJs}}
+    <script src="{{customJs}}" defer></script>
+    {{/if}}
+</body>
+</html> 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .cat-icon { fill: #4a90e2; }
+        .text { font-family: Arial, sans-serif; }
+        .title { font-size: 24px; font-weight: bold; fill: #333; }
+        .tagline { font-size: 12px; fill: #666; }
+    </style>
+    <g class="cat-icon">
+        <path d="M10,25 C10,15 20,10 30,10 C40,10 50,15 50,25 C50,35 40,40 30,40 C20,40 10,35 10,25 Z"/>
+        <circle cx="25" cy="20" r="3"/>
+        <circle cx="35" cy="20" r="3"/>
+        <path d="M25,30 Q30,35 35,30"/>
+    </g>
+    <g class="text">
+        <text x="60" y="25" class="title">Cat Care Guide</text>
+        <text x="60" y="40" class="tagline">Expert Advice for Happy Cats</text>
+    </g>
+</svg> 

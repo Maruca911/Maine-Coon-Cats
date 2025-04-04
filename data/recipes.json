@@ -1,0 +1,123 @@
+{
+    "recipes": [
+        {
+            "name": "Classic Chicken and Rice",
+            "proteins": ["chicken"],
+            "ingredients": [
+                "2 cups cooked chicken (boiled, no seasoning)",
+                "1/2 cup cooked brown rice",
+                "1/4 cup chicken broth (low sodium)",
+                "1/4 cup cooked carrots (mashed)",
+                "1/4 cup cooked peas",
+                "1/4 teaspoon taurine supplement",
+                "1/4 teaspoon calcium supplement",
+                "1/4 teaspoon vitamin supplement"
+            ],
+            "instructions": [
+                "Boil chicken until fully cooked",
+                "Cook rice according to package instructions",
+                "Steam carrots and peas until soft",
+                "Mix all ingredients together",
+                "Add supplements",
+                "Store in refrigerator for up to 3 days"
+            ],
+            "prep_time": "20 minutes",
+            "cook_time": "30 minutes",
+            "servings": "4-5 meals for an average cat"
+        },
+        {
+            "name": "Salmon and Sweet Potato",
+            "proteins": ["fish"],
+            "ingredients": [
+                "2 cups cooked salmon (no bones)",
+                "1/2 cup cooked sweet potato",
+                "1/4 cup fish broth (low sodium)",
+                "1/4 cup cooked green beans",
+                "1/4 teaspoon taurine supplement",
+                "1/4 teaspoon calcium supplement",
+                "1/4 teaspoon fish oil"
+            ],
+            "instructions": [
+                "Steam salmon until cooked through",
+                "Cook sweet potato until soft",
+                "Steam green beans",
+                "Mix all ingredients together",
+                "Add supplements",
+                "Store in refrigerator for up to 3 days"
+            ],
+            "prep_time": "15 minutes",
+            "cook_time": "25 minutes",
+            "servings": "4-5 meals for an average cat"
+        },
+        {
+            "name": "Turkey and Pumpkin",
+            "proteins": ["turkey"],
+            "ingredients": [
+                "2 cups ground turkey (cooked)",
+                "1/2 cup pureed pumpkin",
+                "1/4 cup turkey broth (low sodium)",
+                "1/4 cup cooked spinach",
+                "1/4 teaspoon taurine supplement",
+                "1/4 teaspoon calcium supplement",
+                "1/4 teaspoon vitamin supplement"
+            ],
+            "instructions": [
+                "Brown turkey until fully cooked",
+                "Steam spinach until wilted",
+                "Mix all ingredients together",
+                "Add supplements",
+                "Store in refrigerator for up to 3 days"
+            ],
+            "prep_time": "15 minutes",
+            "cook_time": "20 minutes",
+            "servings": "4-5 meals for an average cat"
+        },
+        {
+            "name": "Beef and Vegetable Medley",
+            "proteins": ["beef"],
+            "ingredients": [
+                "2 cups lean ground beef (cooked)",
+                "1/2 cup cooked quinoa",
+                "1/4 cup beef broth (low sodium)",
+                "1/4 cup mixed vegetables (carrots, peas, green beans)",
+                "1/4 teaspoon taurine supplement",
+                "1/4 teaspoon calcium supplement",
+                "1/4 teaspoon vitamin supplement"
+            ],
+            "instructions": [
+                "Brown beef until fully cooked",
+                "Cook quinoa according to package instructions",
+                "Steam vegetables until soft",
+                "Mix all ingredients together",
+                "Add supplements",
+                "Store in refrigerator for up to 3 days"
+            ],
+            "prep_time": "20 minutes",
+            "cook_time": "35 minutes",
+            "servings": "4-5 meals for an average cat"
+        },
+        {
+            "name": "Chicken Liver Pate",
+            "proteins": ["chicken"],
+            "ingredients": [
+                "1 cup chicken liver (cooked)",
+                "1/2 cup chicken breast (cooked)",
+                "1/4 cup chicken broth (low sodium)",
+                "1/4 cup cooked carrots (mashed)",
+                "1/4 teaspoon taurine supplement",
+                "1/4 teaspoon calcium supplement",
+                "1/4 teaspoon vitamin supplement"
+            ],
+            "instructions": [
+                "Cook liver and chicken breast",
+                "Steam carrots until soft",
+                "Blend all ingredients until smooth",
+                "Add supplements",
+                "Store in refrigerator for up to 3 days"
+            ],
+            "prep_time": "15 minutes",
+            "cook_time": "20 minutes",
+            "servings": "4-5 meals for an average cat"
+        }
+    ]
+} 

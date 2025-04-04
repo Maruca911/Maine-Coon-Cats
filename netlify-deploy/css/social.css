@@ -1,0 +1,138 @@
+/* Social Features Styles */
+.social-features {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.like-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.like-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.like-button:hover {
+    background: #f8f8f8;
+}
+
+.like-button.liked {
+    background: #ffebee;
+    border-color: #ffcdd2;
+    color: #e53935;
+}
+
+.like-count {
+    font-weight: 500;
+}
+
+.share-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.share-title {
+    font-weight: 500;
+    color: #666;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.share-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.share-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.share-button.facebook:hover {
+    background: #1877f2;
+    color: white;
+}
+
+.share-button.twitter:hover {
+    background: #1da1f2;
+    color: white;
+}
+
+.share-button.linkedin:hover {
+    background: #0077b5;
+    color: white;
+}
+
+.share-button.pinterest:hover {
+    background: #e60023;
+    color: white;
+}
+
+/* Comment Section Updates */
+.comment-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.comment-action {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.comment-action:hover {
+    color: #4a90e2;
+}
+
+.comment-action.liked {
+    color: #e53935;
+}
+
+.comment-like-count {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-features {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .share-buttons {
+        flex-wrap: wrap;
+    }
+
+    .comment-actions {
+        flex-wrap: wrap;
+    }
+} 
