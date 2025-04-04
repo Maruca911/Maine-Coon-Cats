@@ -64,7 +64,4 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';"
-
-[[plugins]]
-  package = "@netlify/plugin-gatsby" 
+    Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';" 
