@@ -8,7 +8,7 @@ import mimetypes
 from datetime import datetime, timedelta
 from meal_planner import MealPlanGenerator
 
-PORT = 8000
+PORT = 8001
 MAX_PORT_ATTEMPTS = 10
 
 def find_available_port(start_port):
@@ -72,7 +72,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
         content_type, _ = mimetypes.guess_type(path)
         return content_type or 'text/html'
 
-def run():
+def run(server_class=http.server.HTTPServer, handler_class=MyHttpRequestHandler, port=PORT):
     # Set up signal handlers for graceful shutdown
     signal.signal(signal.SIGINT, cleanup)
     signal.signal(signal.SIGTERM, cleanup)
@@ -87,24 +87,11 @@ def run():
         sys.exit(1)
 
     # Set up the server
-    handler = MyHttpRequestHandler
-    server_class = http.server.HTTPServer
-
-    try:
-        server_address = ('', port)
-        httpd = server_class(server_address, handler)
-        print(f"Serving at http://localhost:{port}")
-        print("Press Ctrl+C to stop the server")
-        httpd.serve_forever()
-    except KeyboardInterrupt:
-        print("\nServer stopped by user")
-    except Exception as e:
-        print(f"Error: {e}")
-    finally:
-        try:
-            httpd.server_close()
-        except:
-            pass
+    server_address = ('', port)
+    httpd = server_class(server_address, handler_class)
+    print(f"Starting server on port {port}")
+    print("Press Ctrl+C to stop the server")
+    httpd.serve_forever()
 
 if __name__ == "__main__":
     run() 
