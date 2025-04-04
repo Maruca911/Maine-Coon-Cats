@@ -1,120 +1,42 @@
 import http.server
 import socketserver
-import os
 import sys
-import socket
-import json
-from urllib.parse import parse_qs, urlparse
+import os
+from pathlib import Path
 
-PORT = int(os.environ.get("PORT", 8000))
-DIRECTORY = "."
-
-class Handler(http.server.SimpleHTTPRequestHandler):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory=DIRECTORY, **kwargs)
-
-    def end_headers(self):
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate')
-        super().end_headers()
-
-    def do_POST(self):
-        if self.path == '/generate-meal-plan':
-            content_length = int(self.headers['Content-Length'])
-            post_data = self.rfile.read(content_length)
-            form_data = parse_qs(post_data.decode('utf-8'))
-            
-            try:
-                # Basic response for now, we'll implement the meal planner later
-                result = {
-                    'success': True,
-                    'message': 'Meal plan generation will be implemented soon'
-                }
-                
-                self.send_response(200)
-                self.send_header('Content-type', 'application/json')
-                self.end_headers()
-                self.wfile.write(json.dumps(result).encode())
-            except Exception as e:
-                self.send_response(500)
-                self.send_header('Content-type', 'application/json')
-                self.end_headers()
-                self.wfile.write(json.dumps({
-                    'success': False,
-                    'message': str(e)
-                }).encode())
-        else:
-            self.send_response(404)
-            self.end_headers()
-            self.wfile.write(b'Not Found')
-
+class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         # Handle root path
         if self.path == '/':
             self.path = '/index.html'
-        
         # Handle blog paths
-        if self.path.startswith('/blog/'):
-            # Remove trailing slash if present
-            path = self.path.rstrip('/')
-            
-            # Try different file extensions
-            possible_paths = [
-                path,
-                path + '.html',
-                path + '/index.html'
-            ]
-            
-            for try_path in possible_paths:
-                file_path = try_path[1:]  # Remove leading slash
-                if os.path.isfile(file_path):
-                    self.path = try_path
-                    break
-        
-        try:
-            file_to_open = open(self.path[1:], 'rb').read()
-            self.send_response(200)
-        except:
-            file_to_open = b'File not found'
-            self.send_response(404)
-        
-        self.end_headers()
-        self.wfile.write(file_to_open)
+        elif self.path.startswith('/blog/'):
+            # Check if the path ends with a trailing slash
+            if not self.path.endswith('/'):
+                self.path += '/'
+            # Add index.html to the path
+            self.path += 'index.html'
+        return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
-def is_port_in_use(port):
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        try:
-            s.bind(('localhost', port))
-            return False
-        except socket.error:
-            return True
-
-def find_available_port(start_port):
-    port = start_port
-    while is_port_in_use(port):
-        port += 1
-    return port
-
-def run():
+def run(port=8000):
+    # Set the directory to serve files from
+    os.chdir(str(Path(__file__).parent))
+    
+    # Create the server
+    handler = MyHttpRequestHandler
+    server_address = ('', port)
+    httpd = socketserver.TCPServer(server_address, handler)
+    
+    print(f"Serving at http://localhost:{port}")
+    print("Press Ctrl+C to stop the server")
+    
     try:
-        # Try to use the default port
-        if is_port_in_use(PORT):
-            print(f"Port {PORT} is in use. Finding an available port...")
-            port = find_available_port(PORT)
-            print(f"Using port {port} instead.")
-        else:
-            port = PORT
-
-        with socketserver.TCPServer(("", port), Handler) as httpd:
-            print(f"Serving at http://localhost:{port}")
-            print("Press Ctrl+C to stop the server")
-            httpd.serve_forever()
+        httpd.serve_forever()
     except KeyboardInterrupt:
-        print("\nServer stopped.")
-        sys.exit(0)
-    except Exception as e:
-        print(f"Error: {e}")
-        sys.exit(1)
+        print("\nShutting down server...")
+        httpd.server_close()
 
 if __name__ == "__main__":
-    run() 
+    # Get port from command line argument or use default
+    port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
+    run(port) 
