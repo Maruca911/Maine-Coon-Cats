@@ -1,16 +1,15 @@
 User-agent: *
 Allow: /
-Allow: /blog/
-Allow: /images/
-Allow: /css/
-Allow: /js/
+Sitemap: https://www.maine-coon-cats.eu/sitemap.xml
 
+# Disallow admin and private directories
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
-Disallow: /tmp/
-Disallow: /cgi-bin/
-Disallow: /includes/
-Disallow: /config/
 
-Sitemap: https://www.maine-coon-cats.eu/sitemap.xml 
+# Allow all other content
+Allow: /blog/
+Allow: /static/
+Allow: /css/
+Allow: /js/
+Allow: /images/ 
