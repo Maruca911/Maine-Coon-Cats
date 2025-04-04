@@ -87,4 +87,64 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-For any questions or suggestions, please open an issue in the repository. 
+For any questions or suggestions, please open an issue in the repository.
+
+# Cat Care Guide Backlink Automation
+
+This script automates the process of generating backlinks for the Cat Care Guide website through various strategies including directory submissions and outreach to veterinary clinics and pet bloggers.
+
+## Setup
+
+1. Install the required packages:
+```bash
+pip install -r requirements.txt
+```
+
+2. Create a `.env` file with your email credentials:
+```
+EMAIL_USER=your_email@example.com
+EMAIL_PASSWORD=your_app_specific_password
+```
+
+3. Update `backlink_config.json` with your target directories, vet clinics, and pet bloggers.
+
+## Usage
+
+Run the script:
+```bash
+python backlink_automation.py
+```
+
+The script will:
+- Submit your site to pet-related directories
+- Send outreach emails to veterinary clinics
+- Contact pet bloggers for potential collaborations
+- Generate a report of all activities
+
+## Features
+
+- Automated directory submissions
+- Personalized outreach emails
+- Rate limiting to avoid spam filters
+- Detailed activity reporting
+- Configurable targets and resources
+
+## Configuration
+
+Edit `backlink_config.json` to:
+- Add/remove target directories
+- Update vet clinic and blogger information
+- Modify email templates
+- Add new resources
+
+## Notes
+
+- The script includes random delays to avoid rate limiting
+- All email templates are customizable
+- Reports are saved in the `reports` directory
+- Monitor your email account for responses
+
+## Requirements
+
+- Python 3.8+
+- See `requirements.txt` for package dependencies 

@@ -1,0 +1,28 @@
+{
+    "directory_submissions": [],
+    "vet_clinic_outreach": [],
+    "blogger_outreach": [],
+    "last_submission_date": null,
+    "submission_count": 0,
+    "successful_submissions": 0,
+    "failed_submissions": 0,
+    "pending_responses": [],
+    "blacklisted_domains": [],
+    "rate_limits": {
+        "daily_limit": 50,
+        "hourly_limit": 10,
+        "min_delay_seconds": 30,
+        "max_delay_seconds": 120
+    },
+    "statistics": {
+        "total_submissions": 0,
+        "success_rate": 0,
+        "average_response_time": 0,
+        "top_performing_resources": [],
+        "conversion_rates": {
+            "directory": 0,
+            "vet_clinic": 0,
+            "blogger": 0
+        }
+    }
+} 

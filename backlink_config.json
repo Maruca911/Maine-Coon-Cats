@@ -1,0 +1,87 @@
+{
+    "directories": [
+        {
+            "name": "PetMD Directory",
+            "url": "https://www.petmd.com/directory",
+            "submission_url": "https://www.petmd.com/submit-resource",
+            "category": "Cat Breed Resources"
+        },
+        {
+            "name": "AVMA Resources",
+            "url": "https://www.avma.org/resources-tools",
+            "submission_url": "https://www.avma.org/submit-resource",
+            "category": "Cat Breed Information"
+        },
+        {
+            "name": "ASPCA Resources",
+            "url": "https://www.aspca.org/resources",
+            "submission_url": "https://www.aspca.org/submit-resource",
+            "category": "Cat Breed Education"
+        }
+    ],
+    "vet_clinics": [
+        {
+            "name": "Happy Paws Veterinary Clinic",
+            "email": "contact@happypawsvet.com",
+            "website": "https://www.happypawsvet.com",
+            "location": "New York, NY"
+        },
+        {
+            "name": "Purrfect Care Animal Hospital",
+            "email": "info@purrfectcare.com",
+            "website": "https://www.purrfectcare.com",
+            "location": "Los Angeles, CA"
+        }
+    ],
+    "pet_bloggers": [
+        {
+            "name": "The Cat Whisperer",
+            "email": "contact@catwhisperer.com",
+            "website": "https://www.catwhisperer.com",
+            "niche": "Cat Behavior and Training"
+        },
+        {
+            "name": "Feline Nutrition Expert",
+            "email": "info@felinenutrition.com",
+            "website": "https://www.felinenutrition.com",
+            "niche": "Cat Nutrition and Health"
+        }
+    ],
+    "email_settings": {
+        "smtp_server": "smtp.gmail.com",
+        "smtp_port": 587,
+        "sender_email": "mariana@maine-coon-cats.eu",
+        "sender_password": "YOUR_APP_PASSWORD"
+    },
+    "website": {
+        "name": "Maine Coon Cats",
+        "url": "https://www.maine-coon-cats.eu",
+        "contact_email": "mariana@maine-coon-cats.eu"
+    },
+    "resources": {
+        "infographics": [
+            {
+                "title": "Maine Coon Care Guide",
+                "url": "https://www.maine-coon-cats.eu/maine-coon-care-guide",
+                "description": "Comprehensive guide to Maine Coon cat care and maintenance"
+            },
+            {
+                "title": "Maine Coon Nutrition Guide",
+                "url": "https://www.maine-coon-cats.eu/maine-coon-nutrition",
+                "description": "Understanding Maine Coon dietary needs and feeding practices"
+            }
+        ],
+        "checklists": [
+            {
+                "title": "Maine Coon Kitten Checklist",
+                "url": "https://www.maine-coon-cats.eu/maine-coon-kitten-checklist",
+                "description": "Essential items and tasks for new Maine Coon kitten owners"
+            },
+            {
+                "title": "Maine Coon Health Checklist",
+                "url": "https://www.maine-coon-cats.eu/maine-coon-health-checklist",
+                "description": "Monthly health monitoring guide for Maine Coon owners"
+            }
+        ]
+    }
+} 

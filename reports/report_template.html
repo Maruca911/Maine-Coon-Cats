@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backlink Generation Report - {date}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .success {
+            color: #27ae60;
+        }
+        .warning {
+            color: #f39c12;
+        }
+        .error {
+            color: #e74c3c;
+        }
+        .summary {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Backlink Generation Report</h1>
+        <p>Generated on: {date}</p>
+        
+        <div class="summary">
+            <h2>Summary</h2>
+            <p>Total submissions: {total_submissions}</p>
+            <p>Successful submissions: {successful_submissions}</p>
+            <p>Failed submissions: {failed_submissions}</p>
+        </div>
+
+        <div class="section">
+            <h2>Directory Submissions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Directory</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {directory_submissions}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Vet Clinic Outreach</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Clinic</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Response</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {vet_clinic_outreach}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Blogger Outreach</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Blogger</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Response</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {blogger_outreach}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Next Steps</h2>
+            <ul>
+                <li>Follow up on pending submissions in 3-5 business days</li>
+                <li>Monitor email responses</li>
+                <li>Update outreach list based on responses</li>
+                <li>Schedule next round of submissions</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 
