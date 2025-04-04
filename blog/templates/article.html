@@ -3,13 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} | Cat Care Guide</title>
-    <meta name="description" content="{{ description }}">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="{{ description }}">
-    <meta property="og:image" content="{{ image }}">
-    <meta property="og:url" content="{{ url }}">
+    <title>{{ article.title }} | Cat Care Guide</title>
+    <meta name="description" content="{{ article.description }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catcareguide.com{{ article.url }}">
+    <meta property="og:title" content="{{ article.title }}">
+    <meta property="og:description" content="{{ article.description }}">
+    <meta property="og:image" content="https://catcareguide.com{{ article.image }}">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catcareguide.com{{ article.url }}">
+    <meta name="twitter:title" content="{{ article.title }}">
+    <meta name="twitter:description" content="{{ article.description }}">
+    <meta name="twitter:image" content="https://catcareguide.com{{ article.image }}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catcareguide.com{{ article.url }}">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{ article.title }}",
+        "description": "{{ article.description }}",
+        "image": "https://catcareguide.com{{ article.image }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ article.author }}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cat Care Guide",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://catcareguide.com/images/logo.png"
+            }
+        },
+        "datePublished": "{{ article.date }}",
+        "dateModified": "{{ article.date }}",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://catcareguide.com{{ article.url }}"
+        }
+    }
+    </script>
+    
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/article.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -32,10 +76,10 @@
     <main class="container">
         <article class="blog-post">
             <header class="post-header">
-                <h1>{{ title }}</h1>
+                <h1>{{ article.title }}</h1>
                 <div class="post-meta">
-                    <span class="post-date">{{ date }}</span>
-                    <span class="post-category">{{ category }}</span>
+                    <span class="post-date">{{ article.date }}</span>
+                    <span class="post-category">{{ article.category }}</span>
                 </div>
                 <div class="social-share">
                     <button class="share-button" data-platform="facebook">
@@ -54,11 +98,11 @@
             </header>
 
             <div class="post-content">
-                {{ content }}
+                {{ article.content }}
             </div>
 
             <div class="post-tags">
-                {% for tag in tags %}
+                {% for tag in article.tags %}
                 <span class="tag">{{ tag }}</span>
                 {% endfor %}
             </div>

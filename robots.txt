@@ -1,15 +1,21 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.maine-coon-cats.eu/sitemap.xml
+Allow: /blog/
+Allow: /about
+Allow: /contact
+Allow: /privacy
+Allow: /impressum
 
 # Disallow admin and private directories
 Disallow: /admin/
 Disallow: /private/
-Disallow: /temp/
+Disallow: /tmp/
+Disallow: /cgi-bin/
 
 # Allow all other content
-Allow: /blog/
 Allow: /static/
 Allow: /css/
 Allow: /js/
-Allow: /images/ 
+Allow: /images/
+
+Sitemap: https://catcareguide.com/sitemap.xml 

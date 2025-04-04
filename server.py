@@ -1,19 +1,29 @@
 import http.server
 import socketserver
 import os
+import sys
+import signal
+import socket
 import mimetypes
 from datetime import datetime, timedelta
-import socket
+from meal_planner import MealPlanGenerator
 
-def find_available_port(start_port=8000, max_port=8100):
-    for port in range(start_port, max_port + 1):
+PORT = 8000
+MAX_PORT_ATTEMPTS = 10
+
+def find_available_port(start_port):
+    for port in range(start_port, start_port + MAX_PORT_ATTEMPTS):
         try:
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 s.bind(('', port))
                 return port
         except OSError:
             continue
-    raise RuntimeError(f"No available ports between {start_port} and {max_port}")
+    raise OSError(f"No available ports found between {start_port} and {start_port + MAX_PORT_ATTEMPTS}")
+
+def cleanup(signum, frame):
+    print("\nCleaning up and shutting down server...")
+    sys.exit(0)
 
 class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -63,18 +73,38 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
         return content_type or 'text/html'
 
 def run():
-    port = find_available_port()
-    handler_class = MyHttpRequestHandler
-    server_class = http.server.HTTPServer
-    server_address = ('', port)
-    httpd = server_class(server_address, handler_class)
-    print(f"Serving at http://localhost:{port}")
-    print("Press Ctrl+C to stop the server")
+    # Set up signal handlers for graceful shutdown
+    signal.signal(signal.SIGINT, cleanup)
+    signal.signal(signal.SIGTERM, cleanup)
+
+    # Find an available port
     try:
+        port = find_available_port(PORT)
+        if port != PORT:
+            print(f"Port {PORT} is in use. Using port {port} instead.")
+    except OSError as e:
+        print(f"Error: {e}")
+        sys.exit(1)
+
+    # Set up the server
+    handler = MyHttpRequestHandler
+    server_class = http.server.HTTPServer
+
+    try:
+        server_address = ('', port)
+        httpd = server_class(server_address, handler)
+        print(f"Serving at http://localhost:{port}")
+        print("Press Ctrl+C to stop the server")
         httpd.serve_forever()
     except KeyboardInterrupt:
-        print("\nShutting down server...")
-        httpd.server_close()
+        print("\nServer stopped by user")
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        try:
+            httpd.server_close()
+        except:
+            pass
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run() 

@@ -1,45 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.maine-coon-cats.eu/</loc>
+        <loc>https://catcareguide.com/</loc>
         <lastmod>2024-03-20</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.maine-coon-cats.eu/about</loc>
+        <loc>https://catcareguide.com/about</loc>
         <lastmod>2024-03-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.maine-coon-cats.eu/contact</loc>
+        <loc>https://catcareguide.com/contact</loc>
         <lastmod>2024-03-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.maine-coon-cats.eu/blog/wellbeing/</loc>
+        <loc>https://catcareguide.com/privacy</loc>
         <lastmod>2024-03-20</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://catcareguide.com/impressum</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://catcareguide.com/blog</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.maine-coon-cats.eu/blog/breeds/</loc>
+        <loc>https://catcareguide.com/blog/maine-coon-cat-breed-information</loc>
         <lastmod>2024-03-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.maine-coon-cats.eu/blog/guides-and-tips/</loc>
+        <loc>https://catcareguide.com/blog/essential-cat-care-tips</loc>
         <lastmod>2024-03-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.maine-coon-cats.eu/blog/toys-and-accessories/</loc>
+        <loc>https://catcareguide.com/blog/best-cat-toys-for-playtime</loc>
         <lastmod>2024-03-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://catcareguide.com/blog/cat-health-and-wellness</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://catcareguide.com/blog/cat-nutrition-guide</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://catcareguide.com/blog/cat-grooming-essentials</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 </urlset> 

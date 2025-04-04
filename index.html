@@ -2,9 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Care Guide - Your Complete Resource for Feline Care</title>
-    <meta name="description" content="Expert advice, tips, and resources for cat care, including nutrition, health, behavior, and breed-specific information.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cat Care Guide - Your Trusted Source for Feline Care Information</title>
+    <meta name="description" content="Comprehensive cat care guides, tips, and resources. Learn about cat health, nutrition, behavior, and more from feline care experts.">
+    <meta name="keywords" content="cat care, feline health, cat nutrition, cat behavior, cat grooming, cat training, Maine Coon cats, cat breeds">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://catcareguide.com/">
+    <meta property="og:title" content="Cat Care Guide - Expert Feline Care Information">
+    <meta property="og:description" content="Your comprehensive resource for cat care, health, nutrition, and behavior. Expert advice for cat owners.">
+    <meta property="og:image" content="https://catcareguide.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://catcareguide.com/">
+    <meta property="twitter:title" content="Cat Care Guide - Expert Feline Care Information">
+    <meta property="twitter:description" content="Your comprehensive resource for cat care, health, nutrition, and behavior. Expert advice for cat owners.">
+    <meta property="twitter:image" content="https://catcareguide.com/images/twitter-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catcareguide.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Cat Care Guide",
+        "url": "https://catcareguide.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://catcareguide.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cat Care Guide",
+        "url": "https://catcareguide.com",
+        "logo": "https://catcareguide.com/images/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/catcareguide",
+            "https://twitter.com/catcareguide",
+            "https://www.instagram.com/catcareguide"
+        ]
+    }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYPFH50WRZ"></script>
     <script>
@@ -13,8 +75,8 @@
       gtag('js', new Date());
       gtag('config', 'G-TYPFH50WRZ');
     </script>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4a6fa5">
     <script src="/js/main.js" defer></script>
     <script src="/js/search-index.js" defer></script>
     <script src="/js/search.js" defer></script>
@@ -23,8 +85,13 @@
     <header>
         <nav class="nav-container">
             <div class="logo">
-                <a href="/">Cat Care Guide</a>
+                <a href="/">
+                    <img src="/images/logo.png" alt="Cat Care Guide Logo - Your Trusted Source for Feline Care Information" width="200" height="50">
+                </a>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <div class="dropdown">
@@ -40,9 +107,12 @@
                 <a href="/contact">Contact</a>
             </div>
             <div class="search-container">
+                <button class="search-toggle" aria-label="Open search">
+                    <i class="fas fa-search"></i>
+                </button>
                 <form class="search-form">
-                    <input type="text" class="search-input" placeholder="Search articles...">
-                    <button type="submit" class="search-button">
+                    <input type="text" class="search-input" placeholder="Search articles..." aria-label="Search articles">
+                    <button type="submit" class="search-button" aria-label="Submit search">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
@@ -53,10 +123,10 @@
     <!-- Search Overlay -->
     <div class="search-overlay">
         <div class="search-form">
-            <input type="text" class="search-input" placeholder="Search articles...">
-            <div class="close-search">
+            <input type="text" class="search-input" placeholder="Search articles..." aria-label="Search articles">
+            <button class="close-search" aria-label="Close search">
                 <i class="fas fa-times"></i>
-            </div>
+            </button>
         </div>
         <div class="search-results"></div>
     </div>
@@ -72,21 +142,33 @@
             <h2>Featured Guides</h2>
             <div class="guide-grid">
                 <article class="guide-card">
-                    <img src="/images/cat-care-basics.jpg" alt="Cat Care Basics">
+                    <img src="/images/cat-care-basics.jpg" 
+                         alt="Essential Cat Care Guide - Daily routines and care tips for your feline companion" 
+                         loading="lazy"
+                         width="400"
+                         height="300">
                     <h3>Essential Cat Care Guide</h3>
                     <p>Everything you need to know about caring for your cat, from daily routines to essential supplies.</p>
                     <a href="/blog/guides-and-tips/essential-cat-care-guide-for-beginners" class="read-more">Read More</a>
                 </article>
 
                 <article class="guide-card">
-                    <img src="/images/cat-nutrition.jpg" alt="Cat Nutrition">
+                    <img src="/images/cat-nutrition.jpg" 
+                         alt="Cat Nutrition Guide - Understanding feline dietary needs and balanced diet" 
+                         loading="lazy"
+                         width="400"
+                         height="300">
                     <h3>Understanding Cat Nutrition</h3>
                     <p>Learn about feline nutrition and how to provide your cat with a balanced, healthy diet.</p>
                     <a href="/blog/wellbeing/nutrition-guide" class="read-more">Read More</a>
                 </article>
 
                 <article class="guide-card">
-                    <img src="/images/cat-behavior.jpg" alt="Cat Behavior">
+                    <img src="/images/cat-behavior.jpg" 
+                         alt="Cat Behavior Guide - Understanding feline body language and communication" 
+                         loading="lazy"
+                         width="400"
+                         height="300">
                     <h3>Understanding Cat Behavior</h3>
                     <p>Decode your cat's behavior and understand their communication.</p>
                     <a href="/blog/behavior/cat-behavior" class="read-more">Read More</a>
@@ -98,22 +180,22 @@
             <h2>Explore Categories</h2>
             <div class="category-grid">
                 <a href="/blog/breeds" class="category-card">
-                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-paw" aria-hidden="true"></i>
                     <h3>Cat Breeds</h3>
                     <p>Learn about different cat breeds and their unique characteristics.</p>
                 </a>
                 <a href="/blog/guides-and-tips" class="category-card">
-                    <i class="fas fa-book"></i>
+                    <i class="fas fa-book" aria-hidden="true"></i>
                     <h3>Guides & Tips</h3>
                     <p>Comprehensive guides and expert tips for cat care.</p>
                 </a>
                 <a href="/blog/toys-and-accessories" class="category-card">
-                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                     <h3>Toys & Accessories</h3>
                     <p>Find the best toys and accessories for your cat.</p>
                 </a>
                 <a href="/blog/wellbeing" class="category-card">
-                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart" aria-hidden="true"></i>
                     <h3>Wellbeing</h3>
                     <p>Tips for keeping your cat happy and healthy.</p>
                 </a>
@@ -153,7 +235,7 @@
             <h2>Stay Updated with Cat Care Tips</h2>
             <p>Subscribe to our newsletter for expert advice, exclusive content, and the latest cat care information.</p>
             <form class="newsletter-form">
-                <input type="email" placeholder="Your email address" required>
+                <input type="email" placeholder="Your email address" required aria-label="Email address">
                 <button type="submit">Subscribe Now</button>
             </form>
             <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>

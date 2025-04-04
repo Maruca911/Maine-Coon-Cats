@@ -1,0 +1,26 @@
+{
+    "name": "Cat Care Guide",
+    "short_name": "CatCare",
+    "description": "Your comprehensive guide to cat care, health, and nutrition",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4a6fa5",
+    "icons": [
+        {
+            "src": "/images/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["lifestyle", "pets", "education"],
+    "lang": "en",
+    "dir": "ltr",
+    "orientation": "portrait",
+    "prefer_related_applications": false
+} 
