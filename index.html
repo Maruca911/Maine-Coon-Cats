@@ -83,180 +83,164 @@
 </head>
 <body>
     <header>
-        <nav class="nav-container">
-            <div class="logo">
-                <a href="/">
-                    <img src="/images/logo.png" alt="Cat Care Guide Logo - Your Trusted Source for Feline Care Information" width="200" height="50">
-                </a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation menu">
-                <span class="hamburger"></span>
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Cat Care Guide Logo" width="40" height="40">
+                <h1>Cat Care Guide</h1>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <div class="nav-links">
-                <a href="/">Home</a>
-                <div class="dropdown">
-                    <a href="/blog">Blog</a>
-                    <div class="dropdown-content">
-                        <a href="/blog/wellbeing">Wellbeing</a>
-                        <a href="/blog/breeds">Breeds</a>
-                        <a href="/blog/guides-and-tips">Guides & Tips</a>
-                        <a href="/blog/toys-and-accessories">Toys & Accessories</a>
-                    </div>
-                </div>
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
-            </div>
-            <div class="search-container">
-                <button class="search-toggle" aria-label="Open search">
-                    <i class="fas fa-search"></i>
-                </button>
-                <form class="search-form">
-                    <input type="text" class="search-input" placeholder="Search articles..." aria-label="Search articles">
-                    <button type="submit" class="search-button" aria-label="Submit search">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-            </div>
-        </nav>
+            <div class="nav-overlay"></div>
+            <nav class="nav-menu">
+                <a href="/" class="active">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    Home
+                </a>
+                <a href="/blog">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
+                    Blog
+                </a>
+                <a href="/about">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    About
+                </a>
+                <a href="/contact">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                    </svg>
+                    Contact
+                </a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Search Overlay -->
-    <div class="search-overlay">
-        <div class="search-form">
-            <input type="text" class="search-input" placeholder="Search articles..." aria-label="Search articles">
-            <button class="close-search" aria-label="Close search">
-                <i class="fas fa-times"></i>
-            </button>
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Welcome to Cat Care Guide</h1>
+                <p>Your trusted source for comprehensive feline care information, tips, and resources.</p>
+                <form class="search-form" action="/search" method="GET">
+                    <input type="search" name="q" placeholder="Search for cat care topics..." aria-label="Search">
+                    <button type="submit" class="btn">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                        Search
+                    </button>
+                </form>
+            </section>
+
+            <section class="featured-guides">
+                <h2>Featured Guides</h2>
+                <div class="grid">
+                    <article class="card">
+                        <img src="/images/cat-care-basics.jpg" alt="Essential Cat Care Guide" loading="lazy">
+                        <div class="card-content">
+                            <h3>Cat Care Basics</h3>
+                            <p>Learn the essential daily routines and care tips for your feline companion.</p>
+                            <a href="/guides/cat-care-basics" class="btn">
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                                </svg>
+                                Read More
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="/images/cat-nutrition.jpg" alt="Cat Nutrition Guide - Understanding your cat's dietary needs">
+                        <div class="card-content">
+                            <h3>Cat Nutrition</h3>
+                            <p>Understand your cat's dietary needs and learn about proper feeding practices.</p>
+                            <a href="/guides/cat-nutrition" class="btn">Read More</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="/images/cat-health.jpg" alt="Cat Health Guide - Common health issues and preventive care">
+                        <div class="card-content">
+                            <h3>Cat Health</h3>
+                            <p>Learn about common health issues and preventive care for your cat.</p>
+                            <a href="/guides/cat-health" class="btn">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="categories">
+                <h2>Browse by Category</h2>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Behavior</h3>
+                            <p>Understanding and managing cat behavior</p>
+                            <a href="/category/behavior" class="btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Training</h3>
+                            <p>Tips and techniques for cat training</p>
+                            <a href="/category/training" class="btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Grooming</h3>
+                            <p>Proper grooming techniques and tools</p>
+                            <a href="/category/grooming" class="btn">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="search-results"></div>
-    </div>
-
-    <main class="container">
-        <section class="hero">
-            <h1>Your Complete Guide to Cat Care</h1>
-            <p>Expert advice, tips, and resources to help you provide the best care for your feline friend.</p>
-            <a href="/blog" class="cta-button">Get Started</a>
-        </section>
-
-        <section class="featured-guides">
-            <h2>Featured Guides</h2>
-            <div class="guide-grid">
-                <article class="guide-card">
-                    <img src="/images/cat-care-basics.jpg" 
-                         alt="Essential Cat Care Guide - Daily routines and care tips for your feline companion" 
-                         loading="lazy"
-                         width="400"
-                         height="300">
-                    <h3>Essential Cat Care Guide</h3>
-                    <p>Everything you need to know about caring for your cat, from daily routines to essential supplies.</p>
-                    <a href="/blog/guides-and-tips/essential-cat-care-guide-for-beginners" class="read-more">Read More</a>
-                </article>
-
-                <article class="guide-card">
-                    <img src="/images/cat-nutrition.jpg" 
-                         alt="Cat Nutrition Guide - Understanding feline dietary needs and balanced diet" 
-                         loading="lazy"
-                         width="400"
-                         height="300">
-                    <h3>Understanding Cat Nutrition</h3>
-                    <p>Learn about feline nutrition and how to provide your cat with a balanced, healthy diet.</p>
-                    <a href="/blog/wellbeing/nutrition-guide" class="read-more">Read More</a>
-                </article>
-
-                <article class="guide-card">
-                    <img src="/images/cat-behavior.jpg" 
-                         alt="Cat Behavior Guide - Understanding feline body language and communication" 
-                         loading="lazy"
-                         width="400"
-                         height="300">
-                    <h3>Understanding Cat Behavior</h3>
-                    <p>Decode your cat's behavior and understand their communication.</p>
-                    <a href="/blog/behavior/cat-behavior" class="read-more">Read More</a>
-                </article>
-            </div>
-        </section>
-
-        <section class="categories">
-            <h2>Explore Categories</h2>
-            <div class="category-grid">
-                <a href="/blog/breeds" class="category-card">
-                    <i class="fas fa-paw" aria-hidden="true"></i>
-                    <h3>Cat Breeds</h3>
-                    <p>Learn about different cat breeds and their unique characteristics.</p>
-                </a>
-                <a href="/blog/guides-and-tips" class="category-card">
-                    <i class="fas fa-book" aria-hidden="true"></i>
-                    <h3>Guides & Tips</h3>
-                    <p>Comprehensive guides and expert tips for cat care.</p>
-                </a>
-                <a href="/blog/toys-and-accessories" class="category-card">
-                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                    <h3>Toys & Accessories</h3>
-                    <p>Find the best toys and accessories for your cat.</p>
-                </a>
-                <a href="/blog/wellbeing" class="category-card">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                    <h3>Wellbeing</h3>
-                    <p>Tips for keeping your cat happy and healthy.</p>
-                </a>
-            </div>
-        </section>
-
-        <section class="fun-fact">
-            <h2>Did You Know?</h2>
-            <p>Cats can rotate their ears 180 degrees and can hear sounds up to 64,000 Hz, which is much higher than humans can hear!</p>
-        </section>
-
-        <section class="popular-articles">
-            <h2>Most Popular Articles</h2>
-            <ol class="article-list">
-                <li>
-                    <a href="/blog/guides-and-tips/essential-cat-care-guide-for-beginners">
-                        <h3>Essential Cat Care Guide</h3>
-                        <p>Learn the fundamentals of cat care, from daily routines to essential supplies.</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/blog/wellbeing/nutrition-guide">
-                        <h3>Understanding Cat Nutrition</h3>
-                        <p>Discover the key elements of feline nutrition and balanced diet.</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/blog/behavior/cat-behavior">
-                        <h3>Understanding Cat Behavior</h3>
-                        <p>Decode your cat's behavior and understand their communication.</p>
-                    </a>
-                </li>
-            </ol>
-        </section>
-
-        <section class="newsletter">
-            <h2>Stay Updated with Cat Care Tips</h2>
-            <p>Subscribe to our newsletter for expert advice, exclusive content, and the latest cat care information.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email address" required aria-label="Email address">
-                <button type="submit">Subscribe Now</button>
-            </form>
-            <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
-        </section>
     </main>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-links">
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/impressum">Impressum</a>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Cat Care Guide is dedicated to providing reliable information about feline care, health, and behavior.</p>
             </div>
-            <div class="copyright">
-                © 2024 Cat Care Guide. All rights reserved.
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/catcareguide" aria-label="Facebook">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/catcareguide" aria-label="Twitter">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/catcareguide" aria-label="Instagram">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="/js/main.js" defer></script>
-    <script src="/js/cookie-consent.js" defer></script>
+    <script src="/js/main.js"></script>
 </body>
 </html> 
