@@ -4,101 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guides & Tips | Cat Care Guide</title>
-    <meta name="description" content="Practical advice and step-by-step guides for cat care and training.">
-    <meta name="keywords" content="cat care guides, cat training tips, cat behavior, cat health, cat care">
+    <meta name="description" content="Comprehensive guides and expert tips for cat care, training, and behavior.">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="container nav-container">
-            <a href="/" class="logo">Cat Care Guide</a>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li class="dropdown">
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="/">Cat Care Guide</a>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <div class="dropdown">
                     <a href="/blog">Blog</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/blog/wellbeing">Wellbeing</a></li>
-                        <li><a href="/blog/cat-breeds">Breeds</a></li>
-                        <li><a href="/blog/guides-and-tips">Guides & Tips</a></li>
-                        <li><a href="/blog/toys-and-accessories">Toys & Accessories</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                    <div class="dropdown-content">
+                        <a href="/blog/wellbeing">Wellbeing</a>
+                        <a href="/blog/breeds">Breeds</a>
+                        <a href="/blog/guides-and-tips">Guides & Tips</a>
+                        <a href="/blog/toys-and-accessories">Toys & Accessories</a>
+                    </div>
+                </div>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Search articles...">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
 
     <main class="container">
-        <header class="page-header">
+        <section class="category-header">
             <h1>Guides & Tips</h1>
-            <p>Practical advice and step-by-step guides for cat care and training.</p>
-        </header>
+            <p>Comprehensive guides and expert tips for cat care</p>
+        </section>
 
-        <div class="blog-grid">
-            <article class="blog-card">
-                <img src="/images/cat-care-basics-guide.jpg" alt="Cat care basics guide - Cat Care Guide">
-                <div class="blog-card-content">
-                    <h2 class="blog-card-title"><a href="/blog/guides-and-tips/essential-cat-care-guide-for-beginners">Essential Cat Care Guide for Beginners</a></h2>
-                    <div class="blog-card-meta">
-                        <span>April 10, 2024</span> • <span>7 min read</span>
+        <div class="content-wrapper">
+            <article class="main-content">
+                <section class="featured-articles">
+                    <h2>Featured Articles</h2>
+                    <div class="article-grid">
+                        <article class="article-card">
+                            <img src="/images/cat-care-basics.jpg" alt="Essential Cat Care Guide">
+                            <div class="article-content">
+                                <h3>Essential Cat Care Guide</h3>
+                                <p>Everything you need to know about caring for your cat.</p>
+                                <a href="/blog/guides-and-tips/essential-cat-care-guide-for-beginners" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <img src="/images/cat-training.jpg" alt="Cat Training Guide">
+                            <div class="article-content">
+                                <h3>Cat Training Guide</h3>
+                                <p>Learn how to train your cat with positive reinforcement.</p>
+                                <a href="/blog/guides-and-tips/cat-training-guide" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <img src="/images/cat-travel.jpg" alt="Cat Travel Guide">
+                            <div class="article-content">
+                                <h3>Cat Travel Guide</h3>
+                                <p>Tips for safe and stress-free travel with your cat.</p>
+                                <a href="/blog/guides-and-tips/cat-travel-guide" class="read-more">Read More</a>
+                            </div>
+                        </article>
                     </div>
-                    <p class="blog-card-excerpt">A comprehensive guide to basic cat care, perfect for new cat owners or those looking to refresh their knowledge.</p>
-                </div>
+                </section>
+
+                <section class="popular-topics">
+                    <h2>Popular Topics</h2>
+                    <div class="topics-grid">
+                        <div class="topic-card">
+                            <i class="fas fa-book"></i>
+                            <h3>Care Basics</h3>
+                            <p>Essential care routines and daily needs</p>
+                        </div>
+                        <div class="topic-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Training</h3>
+                            <p>Behavior training and positive reinforcement</p>
+                        </div>
+                        <div class="topic-card">
+                            <i class="fas fa-plane"></i>
+                            <h3>Travel</h3>
+                            <p>Tips for traveling with your cat</p>
+                        </div>
+                    </div>
+                </section>
             </article>
 
-            <article class="blog-card">
-                <img src="/images/cat-behavior-guide.jpg" alt="Cat behavior guide - Cat Care Guide">
-                <div class="blog-card-content">
-                    <h2 class="blog-card-title"><a href="/blog/guides-and-tips/understanding-cat-behavior-complete-guide">Understanding Cat Behavior: Complete Guide</a></h2>
-                    <div class="blog-card-meta">
-                        <span>April 10, 2024</span> • <span>8 min read</span>
-                    </div>
-                    <p class="blog-card-excerpt">Learn to interpret your cat's behavior and understand what they're trying to communicate.</p>
+            <aside class="sidebar">
+                <div class="newsletter-card">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest cat care tips and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
-            </article>
 
-            <article class="blog-card">
-                <img src="/images/cat-training-guide.jpg" alt="Cat training guide - Cat Care Guide">
-                <div class="blog-card-content">
-                    <h2 class="blog-card-title"><a href="/blog/guides-and-tips/cat-training-tips-and-techniques-guide">Cat Training Tips and Techniques Guide</a></h2>
-                    <div class="blog-card-meta">
-                        <span>April 10, 2024</span> • <span>5 min read</span>
-                    </div>
-                    <p class="blog-card-excerpt">Effective methods for training your cat, from basic commands to behavior modification.</p>
+                <div class="related-categories">
+                    <h3>Related Categories</h3>
+                    <ul>
+                        <li><a href="/blog/wellbeing">Wellbeing</a></li>
+                        <li><a href="/blog/breeds">Breeds</a></li>
+                        <li><a href="/blog/toys-and-accessories">Toys & Accessories</a></li>
+                    </ul>
                 </div>
-            </article>
-
-            <article class="blog-card">
-                <img src="/images/cat-litter-box-guide.jpg" alt="Cat litter box training guide - Cat Care Guide">
-                <div class="blog-card-content">
-                    <h2 class="blog-card-title"><a href="/blog/guides-and-tips/cat-litter-box-training-complete-guide">Cat Litter Box Training: Complete Guide</a></h2>
-                    <div class="blog-card-meta">
-                        <span>April 12, 2024</span> • <span>6 min read</span>
-                    </div>
-                    <p class="blog-card-excerpt">Learn everything about litter box training, from choosing the right box to solving common problems.</p>
-                </div>
-            </article>
-
-            <article class="blog-card">
-                <img src="/images/cat-travel-guide.jpg" alt="Cat travel guide - Cat Care Guide">
-                <div class="blog-card-content">
-                    <h2 class="blog-card-title"><a href="/blog/guides-and-tips/cat-travel-guide-tips-for-safe-journeys">Cat Travel Guide: Tips for Safe Journeys</a></h2>
-                    <div class="blog-card-meta">
-                        <span>April 12, 2024</span> • <span>7 min read</span>
-                    </div>
-                    <p class="blog-card-excerpt">Essential tips and preparation steps for traveling safely with your cat, whether by car or plane.</p>
-                </div>
-            </article>
-
-            <article class="blog-card">
-                <img src="/images/cat-first-aid-guide.jpg" alt="Cat first aid guide - Cat Care Guide">
-                <div class="blog-card-content">
-                    <h2 class="blog-card-title"><a href="/blog/guides-and-tips/cat-first-aid-guide-essential-tips">Cat First Aid Guide: Essential Tips</a></h2>
-                    <div class="blog-card-meta">
-                        <span>April 12, 2024</span> • <span>7 min read</span>
-                    </div>
-                    <p class="blog-card-excerpt">Learn essential first aid techniques for cats and when to seek veterinary help in emergencies.</p>
-                </div>
-            </article>
+            </aside>
         </div>
     </main>
 
@@ -114,5 +133,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="/js/main.js" defer></script>
 </body>
 </html> 

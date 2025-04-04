@@ -3,146 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellbeing | Maine Coon Cats</title>
-    <meta name="description" content="Articles about Maine Coon cat health, nutrition, and overall wellbeing.">
-    <link rel="stylesheet" href="/css/recipe.css">
-    <link rel="stylesheet" href="/css/nav.css">
+    <title>Wellbeing | Cat Care Guide</title>
+    <meta name="description" content="Articles about cat health, nutrition, and overall wellbeing.">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="/" class="logo">
-                <i class="fas fa-paw"></i>
-                <span>Maine Coon Cats</span>
-            </a>
-            <button class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="/">Cat Care Guide</a>
+            </div>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <div class="dropdown">
-                    <a href="/blog" class="dropdown-toggle">
-                        Blog <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
+                    <a href="/blog">Blog</a>
+                    <div class="dropdown-content">
                         <a href="/blog/wellbeing">Wellbeing</a>
-                        <a href="/blog/behavior">Behavior</a>
-                        <a href="/blog/breeding">Breeding</a>
+                        <a href="/blog/breeds">Breeds</a>
+                        <a href="/blog/guides-and-tips">Guides & Tips</a>
+                        <a href="/blog/toys-and-accessories">Toys & Accessories</a>
                     </div>
                 </div>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
             </div>
-        </div>
-    </nav>
-    <div class="menu-overlay"></div>
-
-    <main class="recipe-page">
-        <article class="recipe-article">
-            <header class="recipe-hero">
-                <div class="hero-overlay">
-                    <h1>Wellbeing</h1>
-                    <p class="hero-description">Health, nutrition, and care tips for your Maine Coon</p>
-                </div>
-            </header>
-
-            <div class="recipe-stats">
-                <div class="stat-item">
-                    <i class="fas fa-heart"></i>
-                    <div class="stat-value">50+</div>
-                    <div class="stat-label">Articles</div>
-                    <div class="stat-chart">
-                        <div class="chart-bar" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-star"></i>
-                    <div class="stat-value">4.8</div>
-                    <div class="stat-label">Avg Rating</div>
-                    <div class="stat-chart">
-                        <div class="chart-bar" style="width: 96%"></div>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <div class="stat-value">10k+</div>
-                    <div class="stat-label">Readers</div>
-                    <div class="stat-chart">
-                        <div class="chart-bar" style="width: 100%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="table-of-contents">
-                <h2>Featured Articles</h2>
-                <ul>
-                    <li><a href="/blog/wellbeing/maine-coon-health-checklist">Maine Coon Health Checklist</a></li>
-                    <li><a href="/blog/wellbeing/nutrition-guide">Complete Nutrition Guide</a></li>
-                    <li><a href="/blog/wellbeing/grooming-tips">Grooming Tips and Tricks</a></li>
-                </ul>
-            </div>
-
-            <section class="recipe-section">
-                <h2>Popular Topics</h2>
-                <div class="nutrients-grid">
-                    <div class="nutrient-card">
-                        <div class="nutrient-icon">
-                            <i class="fas fa-heartbeat"></i>
-                        </div>
-                        <h3>Health</h3>
-                        <div class="nutrient-chart">
-                            <div class="chart-bar" style="width: 100%"></div>
-                        </div>
-                        <p>Veterinary care, preventive measures, and common health issues</p>
-                    </div>
-                    <div class="nutrient-card">
-                        <div class="nutrient-icon">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <h3>Nutrition</h3>
-                        <div class="nutrient-chart">
-                            <div class="chart-bar" style="width: 100%"></div>
-                        </div>
-                        <p>Dietary needs, feeding schedules, and nutritional supplements</p>
-                    </div>
-                    <div class="nutrient-card">
-                        <div class="nutrient-icon">
-                            <i class="fas fa-bath"></i>
-                        </div>
-                        <h3>Grooming</h3>
-                        <div class="nutrient-chart">
-                            <div class="chart-bar" style="width: 100%"></div>
-                        </div>
-                        <p>Coat care, nail trimming, and dental hygiene</p>
-                    </div>
-                </div>
-            </section>
-        </article>
-
-        <aside class="recipe-sidebar">
-            <div class="newsletter-card">
-                <h3>Subscribe to Our Newsletter</h3>
-                <p>Get the latest Maine Coon care tips and updates</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit">Subscribe</button>
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Search articles...">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </form>
             </div>
+        </nav>
+    </header>
 
-            <div class="related-articles">
-                <h3>Related Categories</h3>
-                <ul>
-                    <li><a href="/blog/behavior">Behavior</a></li>
-                    <li><a href="/blog/breeding">Breeding</a></li>
-                    <li><a href="/blog/toys-and-accessories">Toys & Accessories</a></li>
-                </ul>
-            </div>
-        </aside>
+    <main class="container">
+        <section class="category-header">
+            <h1>Wellbeing</h1>
+            <p>Health, nutrition, and care tips for your cat</p>
+        </section>
+
+        <div class="content-wrapper">
+            <article class="main-content">
+                <section class="featured-articles">
+                    <h2>Featured Articles</h2>
+                    <div class="article-grid">
+                        <article class="article-card">
+                            <img src="/images/maine-coon-health.jpg" alt="Maine Coon Health">
+                            <div class="article-content">
+                                <h3>Maine Coon Health Checklist</h3>
+                                <p>Essential health checks and preventive care for your Maine Coon.</p>
+                                <a href="/blog/wellbeing/maine-coon-health-checklist" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <img src="/images/cat-nutrition.jpg" alt="Cat Nutrition">
+                            <div class="article-content">
+                                <h3>Complete Nutrition Guide</h3>
+                                <p>Understanding your cat's dietary needs and feeding requirements.</p>
+                                <a href="/blog/wellbeing/nutrition-guide" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <img src="/images/cat-grooming.jpg" alt="Cat Grooming">
+                            <div class="article-content">
+                                <h3>Grooming Tips and Tricks</h3>
+                                <p>Essential grooming techniques for maintaining your cat's health.</p>
+                                <a href="/blog/wellbeing/grooming-tips" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="popular-topics">
+                    <h2>Popular Topics</h2>
+                    <div class="topics-grid">
+                        <div class="topic-card">
+                            <i class="fas fa-heartbeat"></i>
+                            <h3>Health</h3>
+                            <p>Veterinary care, preventive measures, and common health issues</p>
+                        </div>
+                        <div class="topic-card">
+                            <i class="fas fa-utensils"></i>
+                            <h3>Nutrition</h3>
+                            <p>Dietary needs, feeding schedules, and nutritional supplements</p>
+                        </div>
+                        <div class="topic-card">
+                            <i class="fas fa-bath"></i>
+                            <h3>Grooming</h3>
+                            <p>Coat care, nail trimming, and dental hygiene</p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <aside class="sidebar">
+                <div class="newsletter-card">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest cat care tips and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="related-categories">
+                    <h3>Related Categories</h3>
+                    <ul>
+                        <li><a href="/blog/breeds">Breeds</a></li>
+                        <li><a href="/blog/guides-and-tips">Guides & Tips</a></li>
+                        <li><a href="/blog/toys-and-accessories">Toys & Accessories</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
     </main>
 
-    <script src="/js/nav.js" defer></script>
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
+            <div class="copyright">
+                © 2024 Cat Care Guide. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
 </body>
 </html> 
