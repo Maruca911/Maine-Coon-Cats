@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found | Maine Coon Cats</title>
-    <meta name="description" content="The page you're looking for doesn't exist. Find helpful Maine Coon cat care resources here.">
+    <title>Page Not Found | Cat Care Guide</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Find helpful cat care resources on our website.">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYPFH50WRZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TYPFH50WRZ');
+    </script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -48,21 +56,15 @@
 </head>
 <body>
     <header>
-        <nav class="nav-container">
+        <nav class="container">
             <div class="logo">
-                <a href="/">Maine Coon Cats</a>
+                <a href="/">
+                    <img src="/images/logo.png" alt="Cat Care Guide Logo">
+                </a>
             </div>
             <div class="nav-links">
                 <a href="/">Home</a>
-                <div class="dropdown">
-                    <a href="/blog">Blog</a>
-                    <div class="dropdown-content">
-                        <a href="/blog/wellbeing">Wellbeing</a>
-                        <a href="/blog/breeds">Breeds</a>
-                        <a href="/blog/guides-and-tips">Guides & Tips</a>
-                        <a href="/blog/toys-and-accessories">Toys & Accessories</a>
-                    </div>
-                </div>
+                <a href="/blog">Blog</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
             </div>
@@ -70,28 +72,17 @@
     </header>
 
     <main class="container">
-        <div class="error-container">
-            <h1 class="error-code">404</h1>
-            <p class="error-message">Oops! The page you're looking for seems to have wandered off.</p>
-            <p>Don't worry, here are some helpful links to get you back on track:</p>
-            
-            <div class="error-links">
-                <a href="/" class="error-link">
-                    <i class="fas fa-home"></i>
-                    Back to Home
-                </a>
-                <a href="/blog" class="error-link">
-                    <i class="fas fa-book"></i>
-                    Browse Articles
-                </a>
-                <a href="/about" class="error-link">
-                    <i class="fas fa-info-circle"></i>
-                    About Us
-                </a>
-                <a href="/contact" class="error-link">
-                    <i class="fas fa-envelope"></i>
-                    Contact Us
-                </a>
+        <div class="error-page">
+            <h1>404 - Page Not Found</h1>
+            <p>Oops! The page you're looking for doesn't exist or has been moved.</p>
+            <div class="helpful-links">
+                <h2>Here are some helpful links:</h2>
+                <ul>
+                    <li><a href="/">Home Page</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
             </div>
         </div>
     </main>
@@ -102,13 +93,15 @@
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
                 <a href="/privacy">Privacy Policy</a>
+                <a href="/impressum">Impressum</a>
             </div>
             <div class="copyright">
-                © 2024 Maine Coon Cats. All rights reserved.
+                © 2024 Cat Care Guide. All rights reserved.
             </div>
         </div>
     </footer>
 
     <script src="/js/main.js" defer></script>
+    <script src="/js/cookie-consent.js" defer></script>
 </body>
 </html> 

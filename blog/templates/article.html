@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Cat Care Guide</title>
+    <meta name="description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ image }}">
+    <meta property="og:url" content="{{ url }}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="Cat Care Guide Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/blog">Blog</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article class="blog-post">
+            <header class="post-header">
+                <h1>{{ title }}</h1>
+                <div class="post-meta">
+                    <span class="post-date">{{ date }}</span>
+                    <span class="post-category">{{ category }}</span>
+                </div>
+                <div class="social-share">
+                    <button class="share-button" data-platform="facebook">
+                        <i class="fab fa-facebook"></i>
+                    </button>
+                    <button class="share-button" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button class="share-button" data-platform="pinterest">
+                        <i class="fab fa-pinterest"></i>
+                    </button>
+                    <button class="share-button" data-platform="linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="post-content">
+                {{ content }}
+            </div>
+
+            <div class="post-tags">
+                {% for tag in tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+
+            <div class="comments-section">
+                <h2>Comments</h2>
+                <div id="comment-count">0 Comments</div>
+                <form id="comment-form" class="comment-form">
+                    <input type="text" id="comment-author" placeholder="Your Name" required>
+                    <textarea id="comment-content" placeholder="Write your comment..." required></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+                <div id="comments-container"></div>
+            </div>
+        </article>
+
+        <aside class="sidebar">
+            <div class="newsletter-signup">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="related-posts">
+                <h3>Related Articles</h3>
+                <ul>
+                    {% for post in related_posts %}
+                    <li>
+                        <a href="{{ post.url }}">
+                            <img src="{{ post.image }}" alt="{{ post.title }}">
+                            <h4>{{ post.title }}</h4>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/impressum">Impressum</a>
+            </div>
+            <div class="copyright">
+                © 2024 Cat Care Guide. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/comments.js" defer></script>
+    <script src="/js/utils.js" defer></script>
+    <script src="/js/cookie-consent.js" defer></script>
+</body>
+</html> 

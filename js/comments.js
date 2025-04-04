@@ -27,7 +27,8 @@ class CommentSystem {
             content: formData.get('comment'),
             date: new Date().toLocaleDateString(),
             likes: 0,
-            replies: []
+            replies: [],
+            liked: false
         };
 
         this.addComment(comment);
@@ -76,7 +77,7 @@ class CommentSystem {
                     ${this.escapeHtml(comment.content)}
                 </div>
                 <div class="comment-actions">
-                    <button class="comment-action like-button" onclick="commentSystem.handleCommentLike(${comment.id})">
+                    <button class="comment-action like-button ${comment.liked ? 'liked' : ''}">
                         <i class="fas fa-heart"></i>
                         <span class="comment-like-count">${comment.likes}</span>
                     </button>
@@ -133,7 +134,13 @@ class CommentSystem {
     handleCommentLike(commentId) {
         const comment = this.findComment(commentId);
         if (comment) {
-            comment.likes++;
+            if (comment.liked) {
+                comment.likes--;
+                comment.liked = false;
+            } else {
+                comment.likes++;
+                comment.liked = true;
+            }
             this.saveComments();
             this.renderComments();
         }
@@ -205,4 +212,151 @@ class CommentSystem {
 }
 
 // Initialize comment system
-const commentSystem = new CommentSystem(); 
+const commentSystem = new CommentSystem();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const commentForm = document.getElementById('comment-form');
+    const commentsContainer = document.getElementById('comments-container');
+    const commentCount = document.getElementById('comment-count');
+
+    // Load comments from localStorage
+    let comments = JSON.parse(localStorage.getItem('comments')) || {};
+    const currentPage = window.location.pathname;
+    
+    if (!comments[currentPage]) {
+        comments[currentPage] = [];
+    }
+
+    // Display comments
+    function displayComments() {
+        const pageComments = comments[currentPage];
+        commentCount.textContent = pageComments.length;
+        
+        if (pageComments.length === 0) {
+            commentsContainer.innerHTML = '<p class="no-comments">No comments yet. Be the first to comment!</p>';
+            return;
+        }
+
+        const html = pageComments.map((comment, index) => `
+            <div class="comment" data-id="${index}">
+                <div class="comment-header">
+                    <span class="comment-author">${comment.author}</span>
+                    <span class="comment-date">${comment.date}</span>
+                </div>
+                <div class="comment-content">${comment.content}</div>
+                <div class="comment-actions">
+                    <button class="like-button ${comment.liked ? 'liked' : ''}">
+                        <i class="fas fa-heart"></i>
+                        <span class="like-count">${comment.likes}</span>
+                    </button>
+                    <button class="reply-button" onclick="showReplyForm(${index})">
+                        <i class="fas fa-reply"></i> Reply
+                    </button>
+                </div>
+                ${comment.replies ? `
+                    <div class="replies">
+                        ${comment.replies.map(reply => `
+                            <div class="reply">
+                                <div class="reply-header">
+                                    <span class="reply-author">${reply.author}</span>
+                                    <span class="reply-date">${reply.date}</span>
+                                </div>
+                                <div class="reply-content">${reply.content}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : ''}
+                <div class="reply-form" id="reply-form-${index}" style="display: none;">
+                    <textarea placeholder="Write your reply..." required></textarea>
+                    <button onclick="submitReply(${index})">Submit Reply</button>
+                </div>
+            </div>
+        `).join('');
+
+        commentsContainer.innerHTML = html;
+    }
+
+    // Handle comment submission
+    if (commentForm) {
+        commentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const author = document.getElementById('comment-author').value;
+            const content = document.getElementById('comment-content').value;
+            
+            if (!author || !content) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const newComment = {
+                author: author,
+                content: content,
+                date: new Date().toLocaleDateString(),
+                likes: 0,
+                liked: false
+            };
+
+            comments[currentPage].unshift(newComment);
+            localStorage.setItem('comments', JSON.stringify(comments));
+            
+            displayComments();
+            commentForm.reset();
+        });
+    }
+
+    // Toggle like on a comment
+    window.toggleLike = function(index) {
+        const comment = comments[currentPage][index];
+        const likeButton = document.querySelector(`.comment[data-id="${index}"] .like-button`);
+        
+        if (comment.liked) {
+            comment.likes--;
+            comment.liked = false;
+            likeButton.classList.remove('liked');
+        } else {
+            comment.likes++;
+            comment.liked = true;
+            likeButton.classList.add('liked');
+        }
+        
+        localStorage.setItem('comments', JSON.stringify(comments));
+        displayComments();
+    };
+
+    // Show reply form
+    window.showReplyForm = function(index) {
+        const replyForm = document.getElementById(`reply-form-${index}`);
+        replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+    };
+
+    // Submit reply
+    window.submitReply = function(index) {
+        const replyForm = document.getElementById(`reply-form-${index}`);
+        const replyContent = replyForm.querySelector('textarea').value;
+        
+        if (!replyContent) {
+            alert('Please write a reply');
+            return;
+        }
+
+        const reply = {
+            author: 'Anonymous',
+            content: replyContent,
+            date: new Date().toLocaleDateString()
+        };
+
+        if (!comments[currentPage][index].replies) {
+            comments[currentPage][index].replies = [];
+        }
+
+        comments[currentPage][index].replies.push(reply);
+        localStorage.setItem('comments', JSON.stringify(comments));
+        
+        displayComments();
+        replyForm.style.display = 'none';
+    };
+
+    // Initial display
+    displayComments();
+}); 
