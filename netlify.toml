@@ -1,6 +1,12 @@
 [build]
-  publish = "."
-  command = "echo 'No build command needed for static site'"
+  command = "pip install -r requirements.txt && python build.py"
+  publish = "public"
+  environment = { PYTHON_VERSION = "3.11" }
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+  PIP_VERSION = "24.0"
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/blog/cat-breeds"
@@ -52,9 +58,6 @@
   to = "/index.html"
   status = 200
 
-[build.environment]
-  NODE_VERSION = "18"
-
 [[headers]]
   for = "/*"
   [headers.values]
@@ -62,4 +65,7 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';" 
+    Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';"
+
+[[plugins]]
+  package = "@netlify/plugin-gatsby" 
